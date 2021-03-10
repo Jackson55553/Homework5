@@ -1,5 +1,5 @@
 public class PersonDemo {
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         Person[] persArray = new Person[5];
         persArray[0] = new Person("Andrei", "Engineer", "Andr@mail.ru", 4359078, 55000, 63);
         persArray[1] = new Person("Slava", "Engineer", "sls@mail.ru", 2346256, 65000, 23);
@@ -7,14 +7,9 @@ public class PersonDemo {
         persArray[3] = new Person("Anna", "Engineer", "ananas@mail.ru", 676547824, 38000, 48);
         persArray[4] = new Person("Dariya", "Engineer", "dr434@mail.ru", 635524, 37000, 35);
         for (int i = 0; i < persArray.length; i++) {
-            if (persArray[i].age > 40) {
-                System.out.println();
-                System.out.printf("ФИО %s, должность %s, email %s, возраст %s, зарплата %s",
-                        persArray[i].name,
-                        persArray[i].position,
-                        persArray[i].email,
-                        persArray[i].age,
-                        persArray[i].wage);
+            if (persArray[i].getAge() > 40) {
+                System.out.println(persArray[i].toString());
+
             }
         }
     }
